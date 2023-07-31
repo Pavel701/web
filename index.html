@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт-визитка</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+    <title>Ввод возраста</title>
+    <script>
+        function checkAge() {
+            var age = parseInt(prompt("Введите ваш возраст:"));
+            var message;
+
+            switch (true) {
+                case age < 18:
+                    message = "Вы еще несовершеннолетний";
+                    break;
+                case age >= 18 && age <= 65:
+                    message = "Вы взрослый";
+                    break;
+                case age > 65:
+                    message = "Вы пенсионер";
+                    break;
+                default:
+                    message = "Некорректный возраст";
+                    break;
+            }
+
+            document.getElementById("output").innerHTML = message;
         }
-        h1 {
-            text-align: center;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <h1>Мой сайт-визитка</h1>
-    <p>Привет, я Павел Шипунов.</p>
-    <p>Я занимаюсь разработкой веб-сайтов.</p>
-    <p>Мои навыки:</p>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-    <p>Свяжитесь со мной:</p>
-    <ul>
-        <li>Email: paulshipspb@gmail.com</li>
-        <li>Телефон: +7931-212-850-F</li>
-    </ul>
+    <button onclick="checkAge()">Ввести возраст</button>
+    <p id="output"></p>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ввод возраста</title>
+    <script>
+        function checkAge() {
+            var age = parseInt(prompt("Введите ваш возраст:"));
+            var message;
+
+            switch (true) {
+                case age < 18:
+                    message = "Вы еще несовершеннолетний";
+                    break;
+                case age >= 18 && age <= 65:
+                    message = "Вы взрослый";
+                    break;
+                case age > 65:
+                    message = "Вы пенсионер";
+                    break;
+                default:
+                    message = "Некорректный возраст";
+                    break;
+            }
+
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkAge()">Ввести возраст</button>
+    <p id="output"></p>
+</body>
+</html>
+
