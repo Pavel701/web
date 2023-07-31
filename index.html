@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ввод возраста</title>
+    <title>Ввод имени</title>
     <script>
-        function checkAge() {
-            var age = parseInt(prompt("Введите ваш возраст:"));
-            var message;
-
-            switch (true) {
-                case age < 18:
-                    message = "Вы еще несовершеннолетний";
-                    break;
-                case age >= 18 && age <= 65:
-                    message = "Вы взрослый";
-                    break;
-                case age > 65:
-                    message = "Вы пенсионер";
-                    break;
-                default:
-                    message = "Некорректный возраст";
-                    break;
-            }
-
-            document.getElementById("output").innerHTML = message;
+        function showName() {
+            var name = prompt("Введите ваше имя:");
+            document.getElementById("output").innerHTML = "Привет, " + name + "!";
         }
     </script>
 </head>
 <body>
-    <button onclick="checkAge()">Ввести возраст</button>
+    <button onclick="showName()">Ввести имя</button>
     <p id="output"></p>
 </body>
 </html>
@@ -65,4 +48,3 @@
     <p id="output"></p>
 </body>
 </html>
-
